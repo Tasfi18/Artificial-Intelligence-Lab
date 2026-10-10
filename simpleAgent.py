@@ -135,7 +135,7 @@ for i in range(10):
         x, y = new_x, new_y
 
 # Performance metrics
-performance = total_action / total_object_collected
+performance = total_action / total_object_collected if total_object_collected > 0 else 0
 print("\nTotal objects collected:", total_object_collected)
 print("Total moves:", total_move)
 print("\n")

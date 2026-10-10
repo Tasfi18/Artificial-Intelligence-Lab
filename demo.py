@@ -82,7 +82,12 @@ def plot_test_instance(ax, world, path, row, column, closestObjRow, closestObjCo
 
 def main():
     world = [[0 for _ in range(7)] for _ in range(5)]
-    testTime = int(input("Enter the testing time: "))
+    while True:
+        answer = input("Enter the testing time (number of test runs): ").strip()
+        if answer.isdigit() and int(answer) > 0:
+            testTime = int(answer)
+            break
+        print("Please enter a whole number greater than 0.")
     
     # Create subplots for each test instance
     fig, axes = plt.subplots(1, testTime, figsize=(5 * testTime, 5))

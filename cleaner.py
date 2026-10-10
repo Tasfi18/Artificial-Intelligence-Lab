@@ -57,8 +57,8 @@ def simulate(num_tiles, iterations):
         total_turns += turns
         total_dirt_locations += initial_dirt_locations
 
-    avg_performance = total_turns / total_dirt_locations
-    print(f"\nAverage Performance after {iterations} iterations: {avg_performance}%")
+    avg_performance = total_turns / total_dirt_locations if total_dirt_locations else 0
+    print(f"\nAverage actions per dirty tile after {iterations} iterations: {avg_performance:.2f}")
     print(f"Total Actions Taken: {total_turns}")
     print(f"Total Dirt Locations: {total_dirt_locations}")
 

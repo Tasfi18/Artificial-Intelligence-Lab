@@ -128,4 +128,4 @@ if __name__ == "__main__":
     print(f"Total objects collected : {total_object_collected}")
     print(f"Total success : {correct}")
     print(f"Total errors : {error}")
-    print(f"Success Rate : {correct / total_move}")
+    print(f"Success Rate : {correct / total_move if total_move else 0}")
